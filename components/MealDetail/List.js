@@ -1,13 +1,12 @@
-import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-const List = ({ data }) => {
-  return data.map((dataElement) => (
-    <View key={dataElement} style={styles.listItem}>
-      <Text style={styles.itemText}>{dataElement}</Text>
+function List({ data }) {
+  return data.map((dataPoint) => (
+    <View key={dataPoint} style={styles.listItem}>
+      <Text style={styles.itemText}>{dataPoint}</Text>
     </View>
   ));
-};
+}
 
 export default List;
 

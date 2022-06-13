@@ -1,8 +1,9 @@
 import { FlatList } from "react-native";
 import CategoryGridTile from "../components/CategoryGridTile";
+
 import { CATEGORIES } from "../data/dummy-data";
 
-const CategoriesScreen = ({ navigation }) => {
+function CategoriesScreen({ navigation }) {
   function renderCategoryItem(itemData) {
     function pressHandler() {
       navigation.navigate("MealsOverview", {
@@ -27,6 +28,6 @@ const CategoriesScreen = ({ navigation }) => {
       numColumns={2}
     />
   );
-};
+}
 
 export default CategoriesScreen;
